@@ -39,21 +39,21 @@ public class CustomerController {
         return ResponseEntity.ok(this.service.findAllCustomers());
     }
 
-    @GetMapping("/exists/{customer-id}")
+    @GetMapping("/exists/{customerId}")
     public ResponseEntity<Boolean> existsById(
-            @PathVariable("customer-id") String customerId) {
+            @PathVariable("customerId") String customerId) {
         return ResponseEntity.ok(this.service.existsById(customerId));
     }
 
-    @GetMapping("/{customer-id}")
+    @GetMapping("/{customerId}")
     public ResponseEntity<CustomerResponse> findById(
-            @PathVariable("customer-id") String customerId) {
+            @PathVariable("customerId") String customerId) {
         return ResponseEntity.ok(this.service.findById(customerId));
     }
 
-    @DeleteMapping("/{customer-id}")
+    @DeleteMapping("/{customerId}")
     public ResponseEntity<Void> delete(
-            @PathVariable("customer-id") String customerId) {
+            @PathVariable("customerId") String customerId) {
         this.service.deleteCustomer(customerId);
         return ResponseEntity.accepted().build();
     }
