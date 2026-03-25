@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "OrderApplication",
+            "request": "launch",
+            "mainClass": "com.order.ecommerce.OrderApplication",
+            "projectName": "order"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-ConfigServerApplication<config-server>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
